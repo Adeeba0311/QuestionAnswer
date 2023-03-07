@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ml Flask</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/bootstrap.css')}}">
+</head>
+<body>
+	
+		<div align="center" class="bg-info">
+	<h1> Article MCQ </h1></div>
+	<div class="big" align="center">
+		<form action="{{url_for('predict')}}" method="POST">
+			<label for="myfile">Path of file:</label>
+			<input id="myfile" name="myfile"><br><br>
+			<input type="submit" name="" value="Predict" class="btn btn-info">
+		</form>
+		<!--<form action="{{url_for('predict')}}" method="POST">
+			<label for="myfile">Upload a PDF:</label>
+			<input type="file" id="myfile" name="" class="btn btn-info">
+			<input type="submit" name="" value="Upload" class="btn btn-info">
+
+		</form>-->
+	</div>
+
+</body>
+</html>
